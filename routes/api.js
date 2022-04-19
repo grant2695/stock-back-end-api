@@ -44,6 +44,7 @@ router.get('/portfolio', async function(req,res){
 `)
     let portfolio = await models.Portfolio.findAll({symbol: req.body.stockName, quantity: req.body.buyValue, price: req.body.stockPrice})
     res.json(portfolio)
+
 })
 router.get('/portfolio/:id', async function(req,res){
     console.log('req.body is', req.body)
